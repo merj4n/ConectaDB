@@ -94,6 +94,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -177,10 +178,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     public void mostrarDatos(List<Asignaturas> lista) {
         String pantalla="";
+        int con=0;
         for (Asignaturas as:lista) {
             pantalla+=as.id+" "+as.nombre+" "+as.clase+" "+as.profesor+" "+as.horas+"\n";
+            con++;
         }
         jTextArea1.setText(pantalla);
+        jLabel7.setText(""+con);
     }
     private static void cargarDatos(List<Asignaturas> lista) {
 
