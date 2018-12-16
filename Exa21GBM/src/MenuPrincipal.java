@@ -87,7 +87,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jLabel6.setText("LosDatos.txt");
 
-        jLabel7.setText("9");
+        jLabel7.setText("");
 
         jLabel8.setText("56 Kb");
 
