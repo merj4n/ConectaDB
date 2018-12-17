@@ -1,11 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +12,7 @@ import java.util.List;
  */
 public class MenuPrincipal extends javax.swing.JFrame {
     Asignaturas inicial = null;
+    Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     List<Asignaturas> lista = new ArrayList<>();
 
     /**
@@ -52,17 +50,49 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("Altas");
-
-        jButton2.setText("Bajas");
-
-        jButton3.setText("Modificaciones");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+        jButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Altas alta = new Altas();
+                alta.setLocation(dim.width/2-alta.getSize().width/2, dim.height/2-alta.getSize().height/2);
+                alta.setVisible(true);
+                alta.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
 
+        jButton2.setText("Bajas");
+        jButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Bajas baja = new Bajas();
+                baja.setLocation(dim.width/2-baja.getSize().width/2, dim.height/2-baja.getSize().height/2);
+                baja.setVisible(true);
+                baja.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            }
+        });
+
+        jButton3.setText("Modificaciones");
+        jButton3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Modificacion mod = new Modificacion();
+                mod.setLocation(dim.width/2-mod.getSize().width/2, dim.height/2-mod.getSize().height/2);
+                mod.setVisible(true);
+                mod.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            }
+        });
+
+
         jButton4.setText("Consultas");
+        jButton4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Consulta con = new Consulta();
+                con.setLocation(dim.width/2-con.getSize().width/2, dim.height/2-con.getSize().height/2);
+                con.setVisible(true);
+                con.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            }
+        });
 
         jButton5.setText("Datos Iniciales");
 
@@ -200,6 +230,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         lista.add(new Asignaturas("Programacion Orientada a Objetos", "Alberto", 140, "1D/2C",10));
         lista.add(new Asignaturas("Sistemas Operativos", "Dario", 130, "1D/1E", 11));
         lista.add(new Asignaturas("Acceso a Datos", "Juan", 120, "3A/3B", 12));
+    }
+
+    private static void iniciarFichero(){
+
+
+
+
     }
 
     // Variables declaration - do not modify
