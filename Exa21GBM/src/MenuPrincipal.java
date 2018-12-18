@@ -2,7 +2,8 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,8 +64,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 alta.setVisible(true);
                 alta.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 lista=Asignaturas.LeeFichero(path);
+                jLabel8.setText(""+fichero.length());
             }
         });
+        jLabel8.setText(""+fichero.length());
 
         jButton2.setText("Bajas");
         jButton2.addActionListener(new ActionListener() {
@@ -74,8 +77,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 baja.setLocation(dim.width/2-baja.getSize().width/2, dim.height/2-baja.getSize().height/2);
                 baja.setVisible(true);
                 baja.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                jLabel8.setText(""+fichero.length());
             }
         });
+
 
         jButton3.setText("Modificaciones");
         jButton3.addActionListener(new ActionListener() {
@@ -85,8 +90,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 mod.setLocation(dim.width/2-mod.getSize().width/2, dim.height/2-mod.getSize().height/2);
                 mod.setVisible(true);
                 mod.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                jLabel8.setText(""+fichero.length());
             }
         });
+
 
 
         jButton4.setText("Consultas");
@@ -97,8 +104,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 con.setLocation(dim.width/2-con.getSize().width/2, dim.height/2-con.getSize().height/2);
                 con.setVisible(true);
                 con.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                jLabel8.setText(""+fichero.length());
             }
         });
+
 
         jButton5.setText("Datos Iniciales");
 
@@ -110,6 +119,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 mostrarDatos(lista);
             }
         });
+        jLabel8.setText(""+fichero.length());
 
         jLabel1.setText("Nombre del fichero:");
 
@@ -124,8 +134,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel6.setText("Asignaturas.dat");
 
         jLabel7.setText("");
-
-        jLabel8.setText("56 Kb");
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);

@@ -58,9 +58,11 @@ public class Altas extends javax.swing.JFrame {
                     entrada.clase=jTextField4.getText();
                     lista=Asignaturas.LeeFichero(path);
                     for (Asignaturas as:lista) {
-                        contador++;
+                        if(as.id>=contador)
+                        contador=as.id;
                     }
-                    entrada.id=contador++;
+                    contador++;
+                    entrada.id=contador;
                     lista.add(entrada);
                     Asignaturas.EscribeFichero(lista,path);
                     setVisible(false);

@@ -1,3 +1,7 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +41,21 @@ public class Modificacion extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
+
+        jTextField1.setEnabled(false);
+        jTextField2.setEnabled(false);
+        jTextField3.setEnabled(false);
+        jTextField4.setEnabled(false);
+
+
+        /*jTextField5.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
+                System.out.println(e.getKeyChar());
+            }
+        });*/
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel3.setText("Horas");
@@ -55,8 +74,58 @@ public class Modificacion extends javax.swing.JFrame {
         jTextField4.setToolTipText("");
 
         jButton1.setText("Aceptar");
+        jButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                if (jTextField5.getText().length()==0){
+
+                }else {
+                    int id=Integer.parseInt(jTextField5.getText());
+                    lista=Asignaturas.LeeFichero(path);
+                    for (Asignaturas as:lista) {
+                        if(as.id==id){
+                            jTextField1.setText(as.nombre);
+                            jTextField2.setText(as.profesor);
+                            jTextField3.setText(""+as.horas);
+                            jTextField4.setText(as.clase);
+                        }
+                    }
+                    jTextField1.setEnabled(true);
+                    jTextField2.setEnabled(true);
+                    jTextField3.setEnabled(true);
+                    jTextField4.setEnabled(true);
+                    jButton1.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            Asignaturas ar = new Asignaturas();
+                            int codigo = Integer.parseInt(jTextField5.getText());
+
+                            for (Asignaturas asig:lista) {
+                                if(asig.id==codigo){
+                                    asig.nombre= jTextField1.getText();
+                                    asig.horas=Integer.parseInt(jTextField3.getText());
+                                    asig.profesor=jTextField2.getText();
+                                    asig.clase=jTextField4.getText();
+                                }
+                            }
+                            Asignaturas.EscribeFichero(lista,path);
+                            setVisible(false);
+                            MenuPrincipal.mostrarDatos(lista);
+
+                        }
+                    });
+                }
+            }
+        });
 
         jButton2.setText("Cancelar");
+        jButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+            }
+        });
 
         jLabel1.setText("Asignatura");
 
