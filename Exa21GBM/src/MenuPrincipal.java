@@ -11,14 +11,16 @@ import java.util.List;
  * @author merjan
  */
 public class MenuPrincipal extends javax.swing.JFrame {
-    Asignaturas inicial = null;
+
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     List<Asignaturas> lista = new ArrayList<>();
+    String path="C:/Users/merjan/Desktop/Asignaturas.dat";
+    File fichero = new File(path);
 
     /**
      * Creates new form MenuPrincipal
      */
-    public MenuPrincipal() {
+    public MenuPrincipal() throws IOException {
         initComponents();
     }
 
@@ -57,6 +59,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 alta.setLocation(dim.width/2-alta.getSize().width/2, dim.height/2-alta.getSize().height/2);
                 alta.setVisible(true);
                 alta.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
             }
         });
 
@@ -100,7 +103,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 lista.clear();
-                cargarDatos(lista);
+                cargarDatos(lista,path);
                 mostrarDatos(lista);
             }
         });
@@ -113,9 +116,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jLabel4.setText("Tamaño:");
 
-        jLabel5.setText("C:/User/merjan/desktop/LosDatos.txt");
+        jLabel5.setText(path);
 
-        jLabel6.setText("LosDatos.txt");
+        jLabel6.setText("Asignaturas.dat");
 
         jLabel7.setText("");
 
@@ -205,6 +208,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
+    public void altaAsignatura(List<Asignaturas> lista,ObjectOutputStream oos){
+
+        //lista.add()
+    }
+    public void bajaAsignatura(List<Asignaturas> lista){
+        //lista.remove();
+    }
+    public void editaAsignatura(List<Asignaturas> lista){
+
+    }
 
     public void mostrarDatos(List<Asignaturas> lista) {
         String pantalla="";
@@ -216,7 +229,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jTextArea1.setText(pantalla);
         jLabel7.setText(""+con);
     }
-    private static void cargarDatos(List<Asignaturas> lista) {
+    private static void cargarDatos(List<Asignaturas> lista,String path) {
 
         lista.add(new Asignaturas("Algebra", "Mateo", 140, "2D/2E", 1));
         lista.add(new Asignaturas("Calculo Infinitesimal", "Susana", 120, "2D", 2));
@@ -230,12 +243,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         lista.add(new Asignaturas("Programacion Orientada a Objetos", "Alberto", 140, "1D/2C",10));
         lista.add(new Asignaturas("Sistemas Operativos", "Dario", 130, "1D/1E", 11));
         lista.add(new Asignaturas("Acceso a Datos", "Juan", 120, "3A/3B", 12));
-    }
 
-    private static void iniciarFichero(){
-
-
-
+        Asignaturas.EscribeFichero(lista,path);
 
     }
 
