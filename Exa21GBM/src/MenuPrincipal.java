@@ -50,6 +50,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        lista=Asignaturas.LeeFichero(path);
+        mostrarDatos(lista);//muestro el contenido del fichero al iniciar el programa
+
 
         jButton1.setText("Altas");
         jButton1.addActionListener(new ActionListener() {
@@ -59,7 +62,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 alta.setLocation(dim.width/2-alta.getSize().width/2, dim.height/2-alta.getSize().height/2);
                 alta.setVisible(true);
                 alta.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-
+                lista=Asignaturas.LeeFichero(path);
             }
         });
 
@@ -219,7 +222,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     }
 
-    public void mostrarDatos(List<Asignaturas> lista) {
+    public static void mostrarDatos(List<Asignaturas> lista) {
         String pantalla="";
         int con=0;
         for (Asignaturas as:lista) {
@@ -260,9 +263,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private static javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private static javax.swing.JTextArea jTextArea1;
     // End of variables declaration
 }

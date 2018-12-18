@@ -1,15 +1,20 @@
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Altas extends javax.swing.JFrame {
-
+    List<Asignaturas> lista = new ArrayList<>();
+    String path="C:/Users/merjan/Desktop/Asignaturas.dat";
+    File fichero = new File(path);
         /**
          * Creates new form Altas
          */
         public Altas() {
             initComponents();
         }
-
         /**
          * This method is called from within the constructor to initialize the form.
          * WARNING: Do NOT modify this code. The content of this method is always
@@ -45,7 +50,21 @@ public class Altas extends javax.swing.JFrame {
             jButton1.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    int contador=1;
+                    Asignaturas entrada = new Asignaturas();
+                    entrada.nombre=jTextField1.getText();
+                    entrada.profesor=jTextField2.getText();
+                    entrada.horas=Integer.parseInt(jTextField3.getText());
+                    entrada.clase=jTextField4.getText();
+                    lista=Asignaturas.LeeFichero(path);
+                    for (Asignaturas as:lista) {
+                        contador++;
+                    }
+                    entrada.id=contador++;
+                    lista.add(entrada);
+                    Asignaturas.EscribeFichero(lista,path);
                     setVisible(false);
+                    MenuPrincipal.mostrarDatos(lista);
                 }
             });
 

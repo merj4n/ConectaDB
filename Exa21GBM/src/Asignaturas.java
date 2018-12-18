@@ -81,9 +81,9 @@ public class Asignaturas implements Serializable {
             }while (as != null);
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }
 
         return lista;
