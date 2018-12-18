@@ -1,5 +1,13 @@
-public class Bajas extends javax.swing.JFrame {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
+public class Bajas extends javax.swing.JFrame {
+    List<Asignaturas> lista = new ArrayList<>();
+    String path="C:/Users/merjan/Desktop/Asignaturas.dat";
+    File fichero = new File(path);
     /**
      * Creates new form Bajas
      */
@@ -26,8 +34,36 @@ public class Bajas extends javax.swing.JFrame {
         jLabel1.setText("Introduce número ID de la asignatura");
 
         jButton1.setText("Aceptar");
+        jButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int num = Integer.parseInt(jTextField1.getText());
+                lista=Asignaturas.LeeFichero(path);
+                int contador=0;
+                boolean existe=false;
+                for (Asignaturas as:lista) {
+                    if (as.id==num){
+                        existe=true;
+                        break;
+                    }
+                    contador++;
+                }
+                if(existe) {
+                    lista.remove(contador);
+                    Asignaturas.EscribeFichero(lista, path);
+                    setVisible(false);
+                }
+                MenuPrincipal.mostrarDatos(lista);
+            }
+        });
 
         jButton2.setText("Cancelar");
+        jButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

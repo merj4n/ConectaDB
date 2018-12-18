@@ -1,4 +1,11 @@
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Modificacion extends javax.swing.JFrame {
+    List<Asignaturas> lista = new ArrayList<>();
+    String path="C:/Users/merjan/Desktop/Asignaturas.dat";
+    File fichero = new File(path);
 
     /**
      * Creates new form Modificacion

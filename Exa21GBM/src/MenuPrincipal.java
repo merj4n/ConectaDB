@@ -211,16 +211,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
-    public void altaAsignatura(List<Asignaturas> lista,ObjectOutputStream oos){
-
-        //lista.add()
-    }
-    public void bajaAsignatura(List<Asignaturas> lista){
-        //lista.remove();
-    }
-    public void editaAsignatura(List<Asignaturas> lista){
-
-    }
 
     public static void mostrarDatos(List<Asignaturas> lista) {
         String pantalla="";
