@@ -1,3 +1,5 @@
+import com.sun.deploy.util.StringUtils;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -8,7 +10,7 @@ import java.util.List;
 
 public class Modificacion extends javax.swing.JFrame {
     List<Asignaturas> lista = new ArrayList<>();
-    String path="C:/Users/merjan/Desktop/Asignaturas.dat";
+    String path="Asignaturas.dat";
     File fichero = new File(path);
 
     /**
@@ -48,14 +50,6 @@ public class Modificacion extends javax.swing.JFrame {
         jTextField4.setEnabled(false);
 
 
-        /*jTextField5.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                super.keyTyped(e);
-                System.out.println(e.getKeyChar());
-            }
-        });*/
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel3.setText("Horas");
@@ -77,46 +71,55 @@ public class Modificacion extends javax.swing.JFrame {
         jButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                if (jTextField5.getText().length()==0){
-
-                }else {
-                    int id=Integer.parseInt(jTextField5.getText());
-                    lista=Asignaturas.LeeFichero(path);
-                    for (Asignaturas as:lista) {
-                        if(as.id==id){
-                            jTextField1.setText(as.nombre);
-                            jTextField2.setText(as.profesor);
-                            jTextField3.setText(""+as.horas);
-                            jTextField4.setText(as.clase);
+                lista = Asignaturas.LeeFichero(path);
+                boolean escribe=false;
+                try {
+                    Integer.parseInt(jTextField5.getText());
+                    for (Asignaturas ls:lista) {
+                        if (ls.id == Integer.parseInt(jTextField5.getText())){
+                            escribe = true;
                         }
                     }
-                    jTextField1.setEnabled(true);
-                    jTextField2.setEnabled(true);
-                    jTextField3.setEnabled(true);
-                    jTextField4.setEnabled(true);
-                    jButton1.addActionListener(new ActionListener() {
-                        @Override
-                        public void actionPerformed(ActionEvent e) {
-                            Asignaturas ar = new Asignaturas();
-                            int codigo = Integer.parseInt(jTextField5.getText());
-
-                            for (Asignaturas asig:lista) {
-                                if(asig.id==codigo){
-                                    asig.nombre= jTextField1.getText();
-                                    asig.horas=Integer.parseInt(jTextField3.getText());
-                                    asig.profesor=jTextField2.getText();
-                                    asig.clase=jTextField4.getText();
-                                }
+                    if (escribe) {
+                        int id = Integer.parseInt(jTextField5.getText());
+                        for (Asignaturas as : lista) {
+                            if (as.id == id) {
+                                jTextField1.setText(as.nombre);
+                                jTextField2.setText(as.profesor);
+                                jTextField3.setText("" + as.horas);
+                                jTextField4.setText(as.clase);
                             }
-                            Asignaturas.EscribeFichero(lista,path);
-                            setVisible(false);
-                            MenuPrincipal.mostrarDatos(lista);
-
                         }
-                    });
+                        jTextField1.setEnabled(true);
+                        jTextField2.setEnabled(true);
+                        jTextField3.setEnabled(true);
+                        jTextField4.setEnabled(true);
+                        jTextField5.setEnabled(false);
+                        jButton1.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                Asignaturas ar = new Asignaturas();
+                                int codigo = Integer.parseInt(jTextField5.getText());
+
+                                for (Asignaturas asig:lista) {
+                                    if(asig.id==codigo){
+                                        asig.nombre= jTextField1.getText();
+                                        asig.horas=Integer.parseInt(jTextField3.getText());
+                                        asig.profesor=jTextField2.getText();
+                                        asig.clase=jTextField4.getText();
+                                    }
+                                }
+                                Asignaturas.EscribeFichero(lista,path);
+                                setVisible(false);
+                                MenuPrincipal.mostrarDatos(lista);
+
+                            }
+                        });
+                    }
+                }catch (NumberFormatException e1){
+                    System.out.println("No es numero");
                 }
-            }
+                }
         });
 
         jButton2.setText("Cancelar");

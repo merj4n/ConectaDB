@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Bajas extends javax.swing.JFrame {
     List<Asignaturas> lista = new ArrayList<>();
-    String path="C:/Users/merjan/Desktop/Asignaturas.dat";
+    String path="Asignaturas.dat";
     File fichero = new File(path);
     /**
      * Creates new form Bajas
@@ -37,23 +37,27 @@ public class Bajas extends javax.swing.JFrame {
         jButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int num = Integer.parseInt(jTextField1.getText());
-                lista=Asignaturas.LeeFichero(path);
-                int contador=0;
-                boolean existe=false;
-                for (Asignaturas as:lista) {
-                    if (as.id==num){
-                        existe=true;
-                        break;
-                    }
-                    contador++;
-                }
-                if(existe) {
-                    lista.remove(contador);
-                    Asignaturas.EscribeFichero(lista, path);
-                    setVisible(false);
-                }
-                MenuPrincipal.mostrarDatos(lista);
+               try {
+                   int num = Integer.parseInt(jTextField1.getText());
+                   lista = Asignaturas.LeeFichero(path);
+                   int contador = 0;
+                   boolean existe = false;
+                   for (Asignaturas as : lista) {
+                       if (as.id == num) {
+                           existe = true;
+                           break;
+                       }
+                       contador++;
+                   }
+                   if (existe) {
+                       lista.remove(contador);
+                       Asignaturas.EscribeFichero(lista, path);
+                       setVisible(false);
+                   }
+                   MenuPrincipal.mostrarDatos(lista);
+               }catch (NumberFormatException e1){
+                   System.out.println("No es un numero");
+               }
             }
         });
 

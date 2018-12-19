@@ -3,13 +3,14 @@ import java.io.*;
 
 public class Exa21GBM {
     public static void main(String[] args){
-        String path="C:/Users/merjan/Desktop/Asignaturas.dat";
+        String path="Asignaturas.dat";
         File fichero = new File(path);
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
                 MenuPrincipal menu = null;
+
                 try {
                     menu = new MenuPrincipal();
                     menu.setTitle("Gestor Asignaturas");

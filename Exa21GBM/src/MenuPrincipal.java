@@ -15,7 +15,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     List<Asignaturas> lista = new ArrayList<>();
-    String path="C:/Users/merjan/Desktop/Asignaturas.dat";
+    String path="Asignaturas.dat";
     File fichero = new File(path);
 
     /**
@@ -117,6 +117,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 lista.clear();
                 cargarDatos(lista,path);
                 mostrarDatos(lista);
+                jLabel8.setText(""+fichero.length());
             }
         });
         jLabel8.setText(""+fichero.length());
@@ -129,7 +130,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jLabel4.setText("Tamaño:");
 
-        jLabel5.setText(path);
+        jLabel5.setText(fichero.getAbsolutePath());
 
         jLabel6.setText("Asignaturas.dat");
 

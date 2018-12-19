@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Altas extends javax.swing.JFrame {
     List<Asignaturas> lista = new ArrayList<>();
-    String path="C:/Users/merjan/Desktop/Asignaturas.dat";
+    String path="Asignaturas.dat";
     File fichero = new File(path);
         /**
          * Creates new form Altas
@@ -23,7 +23,6 @@ public class Altas extends javax.swing.JFrame {
         @SuppressWarnings("unchecked")
         // <editor-fold defaultstate="collapsed" desc="Generated Code">
         private void initComponents() {
-
             jTextField1 = new javax.swing.JTextField();
             jTextField2 = new javax.swing.JTextField();
             jTextField3 = new javax.swing.JTextField();
@@ -51,22 +50,26 @@ public class Altas extends javax.swing.JFrame {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     int contador=1;
-                    Asignaturas entrada = new Asignaturas();
-                    entrada.nombre=jTextField1.getText();
-                    entrada.profesor=jTextField2.getText();
-                    entrada.horas=Integer.parseInt(jTextField3.getText());
-                    entrada.clase=jTextField4.getText();
-                    lista=Asignaturas.LeeFichero(path);
-                    for (Asignaturas as:lista) {
-                        if(as.id>=contador)
-                        contador=as.id;
+                    try {
+                        Asignaturas entrada = new Asignaturas();
+                        entrada.nombre = jTextField1.getText();
+                        entrada.profesor = jTextField2.getText();
+                        entrada.horas = Integer.parseInt(jTextField3.getText());
+                        entrada.clase = jTextField4.getText();
+                        lista = Asignaturas.LeeFichero(path);
+                        for (Asignaturas as : lista) {
+                            if (as.id >= contador)
+                                contador = as.id;
+                        }
+                        contador++;
+                        entrada.id = contador;
+                        lista.add(entrada);
+                        Asignaturas.EscribeFichero(lista, path);
+                        setVisible(false);
+                        MenuPrincipal.mostrarDatos(lista);
+                    }catch (NumberFormatException e1){
+                        System.out.println("En la hora no hay numero");
                     }
-                    contador++;
-                    entrada.id=contador;
-                    lista.add(entrada);
-                    Asignaturas.EscribeFichero(lista,path);
-                    setVisible(false);
-                    MenuPrincipal.mostrarDatos(lista);
                 }
             });
 

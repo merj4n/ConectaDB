@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Consulta extends javax.swing.JFrame {
     List<Asignaturas> lista = new ArrayList<>();
-    String path="C:/Users/merjan/Desktop/Asignaturas.dat";
+    String path="Asignaturas.dat";
     File fichero = new File(path);
     /**
      * Creates new form Consulta
@@ -51,6 +51,7 @@ public class Consulta extends javax.swing.JFrame {
                         if (as.nombre.contains(jTextField1.getText())) {
                             linea+=as.id+" "+as.nombre+" "+as.clase+" "+as.profesor+" "+as.horas+"\n";
                         }
+
                     }
                     if (elegido =="Clase"){
                         if (as.clase.contains(jTextField1.getText())) {
@@ -68,6 +69,11 @@ public class Consulta extends javax.swing.JFrame {
                         }
                     }
                 }
+                if (linea=="") {
+                    linea = "NO EXISTEN DATOS CON ESTE CONTENIDO.";
+                    jTextArea1.setText(linea);
+                }
+                else
                 jTextArea1.setText(linea);
             }
         });
