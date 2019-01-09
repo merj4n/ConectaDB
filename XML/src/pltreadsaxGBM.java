@@ -4,11 +4,9 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 import org.xml.sax.helpers.XMLReaderFactory;
-
 import java.io.IOException;
 
 public class pltreadsaxGBM {
-
     public static void main(String[] args) throws SAXException, IOException {
 
         //Creacion del objeto que procesa el XML
@@ -21,8 +19,6 @@ public class pltreadsaxGBM {
         // Iniciamos el parser
         procesadorXML.parse(fileXML);
     }
-
-
     private static class GestionContenido extends DefaultHandler{
     public GestionContenido(){
         super();
