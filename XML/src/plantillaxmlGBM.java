@@ -48,7 +48,7 @@ public class plantillaxmlGBM {
                     //añadir ID
                     CrearElemento("id",Integer.toString(id), raiz, document);
                     //añadir apellido
-                    CrearElemento("apellido",apellido, raiz, document);
+                    CrearElemento("apellido",apellido.trim(), raiz, document);
                     //añadir DEP
                     CrearElemento("dep",Integer.toString(dep), raiz, document);
                     //añadir salario

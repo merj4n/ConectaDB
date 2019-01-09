@@ -46,6 +46,10 @@ public class ejp12EscribirFichData {
             buffer = new StringBuffer(apellido);
             //Definimos el largo del String
             buffer.setLength(10);
+            /*for (int i=apellido.length();i<10;i++){
+                buffer.append(" ");
+            }
+            */ //Solucion sin trim() en el ejercicio de plantilla.
             //Escribimos en el archivo
             raf.writeUTF(buffer.toString());
             //Sumamos a la posición su misma posición la cual nos encontramos más el tamanyo del String
