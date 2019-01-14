@@ -10,5 +10,6 @@
     <orderEntry type="library" name="xstream-1.4.11.1" level="project" />
     <orderEntry type="library" name="kxml2-min-2.3.0" level="project" />
     <orderEntry type="library" name="xpp3-1.1.4" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.47-bin" level="project" />
   </component>
 </module>

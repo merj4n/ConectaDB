@@ -1,0 +1,22 @@
+<ListaDepartamentos>
+  <Departamento>
+    <deptN>10</deptN>
+    <nombre>CONTABILIDAD</nombre>
+    <localidad>SEVILLA</localidad>
+  </Departamento>
+  <Departamento>
+    <deptN>20</deptN>
+    <nombre>INVESTIGACION</nombre>
+    <localidad>MADRID</localidad>
+  </Departamento>
+  <Departamento>
+    <deptN>30</deptN>
+    <nombre>VENTAS</nombre>
+    <localidad>BARCELONA</localidad>
+  </Departamento>
+  <Departamento>
+    <deptN>40</deptN>
+    <nombre>PRODUCCION</nombre>
+    <localidad>BILBAO</localidad>
+  </Departamento>
+</ListaDepartamentos>
