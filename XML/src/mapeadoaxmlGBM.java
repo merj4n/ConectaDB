@@ -17,7 +17,7 @@ public class mapeadoaxmlGBM {
             return lista;
         }
     }
-    /*public static class EscribirPersonas{
+    /*public static class EscribirEmpleados{
         public static void main(String[] args) throws IOException {
             File fichero = new File("personaSerial.dat");
             FileInputStream filein = new FileInputStream(fichero);

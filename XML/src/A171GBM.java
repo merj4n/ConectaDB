@@ -8,11 +8,8 @@ import java.util.List;
 
 public class A171GBM {
     public static void main(String[] args) throws IOException {
-
         obtenerdatos();
-
     }
-
 
     private static void obtenerdatos() throws IOException {
         List<Departamento> lista = new ArrayList<>();
