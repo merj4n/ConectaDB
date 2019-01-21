@@ -1,5 +1,6 @@
 import com.thoughtworks.xstream.XStream;
 
+import java.awt.*;
 import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
@@ -7,12 +8,24 @@ import java.util.List;
 
 public class Exa22GBM {
     public static void main(String[] args) throws IOException {
-        //obtenerventas();
         crearfDatos();
         escribirProductos();
+
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+                MenuPrincipal menu = null;
+
+                menu = new MenuPrincipal();
+                menu.setTitle("Consulta de productos por línea");
+                menu.setVisible(true);
+                menu.setLocation(dim.width/2-menu.getSize().width/2, dim.height/2-menu.getSize().height/2);
+            }
+        });
     }
 
-    private static void crearfDatos() throws IOException {
+
+    public static void crearfDatos() throws IOException {
         List<Productos> lista;
         lista=obtenerventas();
         File fichero = new File("productos.dat");
@@ -80,8 +93,7 @@ public class Exa22GBM {
             raf.seek(posicion);*/
             }
     }
-
-    private static List obtenerventas() throws IOException {
+    public static List obtenerventas() {
         List<Productos> lista = new ArrayList<>();
 
         try{
@@ -102,9 +114,9 @@ public class Exa22GBM {
             sentencia_consulta.close();
             conexion.close();
 
-            for (Productos pr:lista){
+            /*for (Productos pr:lista){
                 System.out.printf("codVenta: %s, Producto: %s,fechaVenta: %s, unidadesVendidas: %d, precioUnitario: %.1f, precioVenta: %.1f %n", pr.getCodVenta(),pr.getProducto(),pr.getFechaVenta(),pr.getUnidadesVendidas(),pr.getPrecioUnitario(),pr.getPrecioVenta());
-            }
+            }*/
 
         }catch (ClassNotFoundException cn){
             cn.printStackTrace();

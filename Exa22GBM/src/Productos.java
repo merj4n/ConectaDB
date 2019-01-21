@@ -13,6 +13,7 @@ public class Productos implements Serializable {
         this.codVenta=codVenta;
         this.producto=producto;
         this.fechaVenta=fechaVenta;
+        this.unidadesVendidas=unidadesVendidas;
         this.precioUnitario=precioUnitario;
         this.precioVenta=precioVenta;
     }
@@ -64,6 +65,8 @@ public class Productos implements Serializable {
     public void setPrecioVenta(Double precioVenta) {
         this.precioVenta = precioVenta;
     }
+
+
 
 
 
