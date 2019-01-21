@@ -22,15 +22,17 @@ public class A172GBM {
             Connection conexion = DriverManager.getConnection
                     ("jdbc:mysql://localhost/ejemplogbm?useSSL=false","root","Surfer25**");
             //Consulta
-            String sql_consulta="SELECT e.EMP_NO as emp_no, e.apellido, e.oficio, e2.apellido as dir, e.fecha_alt, e.salario, e.comision, e.dept_no \n" +
-                    "FROM emple e left join emple e2 on e2.emp_no = e.dir\n" +
-                    ";";
+            String sql_consulta="SELECT e.EMP_NO as emp_no, e.apellido, e.oficio, IFNULL(e2.apellido,\"\") as dir, e.fecha_alt, e.salario, e.comision, d.dnombre\n" +
+                    "FROM emple e left join emple e2 on e2.emp_no = e.dir, depart d\n" +
+                    "WHERE d.dept_no = e.dept_no;";
             Statement sentencia_consulta = conexion.createStatement();
             sentencia_consulta.execute(sql_consulta);
             ResultSet rs = sentencia_consulta.getResultSet();
 
             while (rs.next()) {
-                lista.add(new Emplea(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getDate(5),rs.getInt(6),rs.getInt(7),rs.getInt(8)));
+                lista.add(new Emplea(rs.getInt(1),rs.getString(2),rs.getString(3),
+                        rs.getString(4),rs.getString(5),rs.getInt(6),rs.getInt(7),
+                        rs.getString(8)));
             }
             rs.close();
             sentencia_consulta.close();
@@ -70,12 +72,9 @@ class EscribirEmpleados {
         File fichero = new File("empleadosGBM.dat");
         FileInputStream filein = new FileInputStream(fichero);
         ObjectInputStream dataIS = new ObjectInputStream(filein);
-
         System.out.println("Comienza el proceso...");
-
         //Creamos un objeto Lista de Personas
         creadorxml.ListaEmple listaper = new creadorxml.ListaEmple();
-
         try{
             while (true){
                 Emplea emp = (Emplea) dataIS.readObject();
@@ -85,7 +84,6 @@ class EscribirEmpleados {
             e.printStackTrace();
         }
         dataIS.close();
-
         try{
             XStream xstream = new XStream();
             //Cambiar de nombre a las etiquetas XML
@@ -117,7 +115,9 @@ class LeerEmpleados {
         Iterator iterador = listaempleados.listIterator();
         while (iterador.hasNext()){
             Emplea p = (Emplea) iterador.next();
-            System.out.printf("Numero: %d, Nombre: %s, Localidad: %s %n", p.getEmp_no(),p.getApellido(),p.getDir());
+            System.out.printf("Emp_no: %d, Apellido: %s, Oficio: %s,Director: %s, Fecha_Alta: %s, Salario: %d, " +
+                    "Comision: %d, Departamento: %s %n", p.getEmp_no(),p.getApellido(),p.getOficio(),p.getDir(),
+                    p.getFecha_alt(),p.getSalario(),p.getComision(),p.getDept_no());
         }
         System.out.println("Fin de listado...");
     }

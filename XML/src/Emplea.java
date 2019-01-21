@@ -6,12 +6,12 @@ public class Emplea implements Serializable {
     private String apellido;
     private String oficio;
     private String dir;
-    private Date fecha_alt;
+    private String fecha_alt;
     private int salario;
     private int comision;
-    private int dept_no;
+    private String dept_no;
 
-    public Emplea(int emp_no, String apellido, String oficio, String dir, Date fecha_alt, int salario, int comision, int dept_no){
+    public Emplea(int emp_no, String apellido, String oficio, String dir, String fecha_alt, int salario, int comision, String dept_no){
 
         this.emp_no=emp_no;
         this.apellido=apellido;
@@ -55,11 +55,11 @@ public class Emplea implements Serializable {
         this.dir = dir;
     }
 
-    public Date getFecha_alt() {
+    public String getFecha_alt() {
         return fecha_alt;
     }
 
-    public void setFecha_alt(Date fecha_alt) {
+    public void setFecha_alt(String fecha_alt) {
         this.fecha_alt = fecha_alt;
     }
 
@@ -79,11 +79,11 @@ public class Emplea implements Serializable {
         this.comision = comision;
     }
 
-    public int getDept_no() {
+    public String getDept_no() {
         return dept_no;
     }
 
-    public void setDept_no(int dept_no) {
+    public void setDept_no(String dept_no) {
         this.dept_no = dept_no;
     }
 }

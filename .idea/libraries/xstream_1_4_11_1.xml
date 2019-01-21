@@ -1,7 +1,10 @@
 <component name="libraryTable">
   <library name="xstream-1.4.11.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Desktop/xstream-1.4.11.1.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/2ºK/AD/Documentos/BBDD Interpretes/xstream-1.4.11.1.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/2ºK/AD/Documentos/BBDD Interpretes/xpp3-1.1.4.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/2ºK/AD/Documentos/BBDD Interpretes/kxml2-min-2.3.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/2ºK/AD/Documentos/BBDD Interpretes/mysql-connector-java-5.1.47/mysql-connector-java-5.1.47-bin.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

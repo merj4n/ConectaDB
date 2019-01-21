@@ -1,0 +1,162 @@
+<ListaVentas>
+  <Ventas>
+    <codVenta>V1</codVenta>
+    <producto>Placa base VX</producto>
+    <fechaVenta>2018-09-09</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>18000.0</precioUnitario>
+    <precioVenta>36000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V10</codVenta>
+    <producto>DIMM SDRAM 32Mb</producto>
+    <fechaVenta>2019-12-27</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>17000.0</precioUnitario>
+    <precioVenta>68000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V11</codVenta>
+    <producto>Disco IDE 2.5Gb</producto>
+    <fechaVenta>2019-11-02</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>20000.0</precioUnitario>
+    <precioVenta>40000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V12</codVenta>
+    <producto>Procesador MMX</producto>
+    <fechaVenta>2019-10-04</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>15000.0</precioUnitario>
+    <precioVenta>15000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V13</codVenta>
+    <producto>Disco SCSI 4Gb</producto>
+    <fechaVenta>2019-09-06</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>38000.0</precioUnitario>
+    <precioVenta>114000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V14</codVenta>
+    <producto>Disco SCSI 4Gb</producto>
+    <fechaVenta>2019-08-08</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>38000.0</precioUnitario>
+    <precioVenta>76000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V15</codVenta>
+    <producto>Simm EDO 16Mb</producto>
+    <fechaVenta>2019-07-10</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>7000.0</precioUnitario>
+    <precioVenta>21000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V16</codVenta>
+    <producto>Disco SCSI 4Gb</producto>
+    <fechaVenta>2019-06-12</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>38000.0</precioUnitario>
+    <precioVenta>190000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V17</codVenta>
+    <producto>Disco IDE 2.5Gb</producto>
+    <fechaVenta>2018-05-14</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>20000.0</precioUnitario>
+    <precioVenta>40000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V18</codVenta>
+    <producto>Disco IDE 2.5Gb</producto>
+    <fechaVenta>2018-04-16</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>20000.0</precioUnitario>
+    <precioVenta>40000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V19</codVenta>
+    <producto>Placa base VX</producto>
+    <fechaVenta>2018-03-18</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>18000.0</precioUnitario>
+    <precioVenta>54000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V2</codVenta>
+    <producto>Disco SCSI 4Gb</producto>
+    <fechaVenta>2018-08-11</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>38000.0</precioUnitario>
+    <precioVenta>38000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V20</codVenta>
+    <producto>DIMM SDRAM 32Mb</producto>
+    <fechaVenta>2018-02-20</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>17000.0</precioUnitario>
+    <precioVenta>51000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V3</codVenta>
+    <producto>Disco IDE 2.5Gb</producto>
+    <fechaVenta>2018-07-13</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>20000.0</precioUnitario>
+    <precioVenta>60000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V4</codVenta>
+    <producto>Procesador K6-2</producto>
+    <fechaVenta>2018-06-15</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>18500.0</precioUnitario>
+    <precioVenta>92500.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V5</codVenta>
+    <producto>DIMM SDRAM 32Mb</producto>
+    <fechaVenta>2018-05-17</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>17000.0</precioUnitario>
+    <precioVenta>51000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V6</codVenta>
+    <producto>Disco SCSI 4Gb</producto>
+    <fechaVenta>2018-04-19</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>38000.0</precioUnitario>
+    <precioVenta>38000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V7</codVenta>
+    <producto>Disco IDE 2.5Gb</producto>
+    <fechaVenta>2019-03-21</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>20000.0</precioUnitario>
+    <precioVenta>40000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V8</codVenta>
+    <producto>Disco IDE 2.5Gb</producto>
+    <fechaVenta>2019-02-23</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>20000.0</precioUnitario>
+    <precioVenta>20000.0</precioVenta>
+  </Ventas>
+  <Ventas>
+    <codVenta>V9</codVenta>
+    <producto>Placa base VX</producto>
+    <fechaVenta>2019-01-25</fechaVenta>
+    <unidadesVendidas>0</unidadesVendidas>
+    <precioUnitario>18000.0</precioUnitario>
+    <precioVenta>72000.0</precioVenta>
+  </Ventas>
+</ListaVentas>

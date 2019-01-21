@@ -4,138 +4,159 @@
     <apellido>SANCHEZ</apellido>
     <oficio>EMPLEADO</oficio>
     <dir>FERNANDEZ</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>1040</salario>
     <comision>0</comision>
-    <dept__no>20</dept__no>
+    <dept__no>INVESTIGACION</dept__no>
+  </Emplea>
+  <Emplea>
+    <emp__no>7234</emp__no>
+    <apellido>BELDA</apellido>
+    <oficio>PROGRAMER</oficio>
+    <dir>FERNANDEZ</dir>
+    <fecha__alt>1981-11-27</fecha__alt>
+    <salario>2800</salario>
+    <comision>0</comision>
+    <dept__no>CONTABILIDAD</dept__no>
+  </Emplea>
+  <Emplea>
+    <emp__no>7234</emp__no>
+    <apellido>BELDA</apellido>
+    <oficio>DEVELOPER</oficio>
+    <dir>FERNANDEZ</dir>
+    <fecha__alt>1981-11-27</fecha__alt>
+    <salario>2800</salario>
+    <comision>0</comision>
+    <dept__no>CONTABILIDAD</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7782</emp__no>
     <apellido>CEREZO</apellido>
     <oficio>DIRECTOR</oficio>
     <dir>REY</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>2885</salario>
     <comision>0</comision>
-    <dept__no>10</dept__no>
+    <dept__no>CONTABILIDAD</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7698</emp__no>
     <apellido>NEGRO</apellido>
     <oficio>DIRECTOR</oficio>
     <dir>REY</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>3005</salario>
     <comision>0</comision>
-    <dept__no>30</dept__no>
+    <dept__no>VENTAS</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7566</emp__no>
     <apellido>JIMENEZ</apellido>
     <oficio>DIRECTOR</oficio>
     <dir>REY</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>2900</salario>
     <comision>0</comision>
-    <dept__no>20</dept__no>
+    <dept__no>INVESTIGACION</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7876</emp__no>
     <apellido>ALONSO</apellido>
     <oficio>EMPLEADO</oficio>
     <dir>GIL</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>1430</salario>
     <comision>0</comision>
-    <dept__no>20</dept__no>
+    <dept__no>INVESTIGACION</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7934</emp__no>
     <apellido>MUÑOZ</apellido>
     <oficio>EMPLEADO</oficio>
     <dir>CEREZO</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>1690</salario>
     <comision>0</comision>
-    <dept__no>10</dept__no>
+    <dept__no>CONTABILIDAD</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7900</emp__no>
     <apellido>JIMENO</apellido>
     <oficio>EMPLEADO</oficio>
     <dir>NEGRO</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>1335</salario>
     <comision>0</comision>
-    <dept__no>30</dept__no>
+    <dept__no>VENTAS</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7844</emp__no>
     <apellido>TOVAR</apellido>
     <oficio>VENDEDOR</oficio>
     <dir>NEGRO</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>1350</salario>
     <comision>0</comision>
-    <dept__no>30</dept__no>
+    <dept__no>VENTAS</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7654</emp__no>
     <apellido>MARTIN</apellido>
     <oficio>VENDEDOR</oficio>
     <dir>NEGRO</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>1600</salario>
     <comision>1020</comision>
-    <dept__no>30</dept__no>
+    <dept__no>VENTAS</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7499</emp__no>
     <apellido>ARROYO</apellido>
     <oficio>VENDEDOR</oficio>
     <dir>NEGRO</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>1500</salario>
     <comision>390</comision>
-    <dept__no>30</dept__no>
+    <dept__no>VENTAS</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7499</emp__no>
     <apellido>ARROYO</apellido>
     <oficio>VENDEDOR</oficio>
     <dir>NEGRO</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>1500</salario>
     <comision>390</comision>
-    <dept__no>30</dept__no>
+    <dept__no>VENTAS</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7902</emp__no>
     <apellido>FERNANDEZ</apellido>
     <oficio>ANALISTA</oficio>
     <dir>JIMENEZ</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>3000</salario>
     <comision>0</comision>
-    <dept__no>20</dept__no>
+    <dept__no>INVESTIGACION</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7788</emp__no>
     <apellido>GIL</apellido>
     <oficio>ANALISTA</oficio>
     <dir>JIMENEZ</dir>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>3000</salario>
     <comision>0</comision>
-    <dept__no>20</dept__no>
+    <dept__no>INVESTIGACION</dept__no>
   </Emplea>
   <Emplea>
     <emp__no>7839</emp__no>
     <apellido>REY</apellido>
     <oficio>PRESIDENTE</oficio>
-    <fecha__alt class="sql-date">1990-02-20</fecha__alt>
+    <dir></dir>
+    <fecha__alt>1990-02-20</fecha__alt>
     <salario>4100</salario>
     <comision>0</comision>
-    <dept__no>10</dept__no>
+    <dept__no>CONTABILIDAD</dept__no>
   </Emplea>
 </ListaEmple>
